@@ -19,5 +19,9 @@
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check"
   },
-  "dependencies": {}
+  "dependencies": {
+      "set-value": ">=2.0.1",
+      "kind-of": ">=6.0.3",
+      "minimist": ">=0.2.1"
+  }
 }
