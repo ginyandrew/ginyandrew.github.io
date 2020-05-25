@@ -2,10 +2,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
 *.gem
 .bundle
-.sass-cache
-_site
 Gemfile.lock
 node_modules
