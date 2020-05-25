@@ -80,7 +80,7 @@ aux_links:
     - "//github.com/ginyandrew.github.io"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright @Gin Andrew"
+footer_content: "Copyright @Gin Andrew (ginyandrew@gmail.com)"
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: dark
