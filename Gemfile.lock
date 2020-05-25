@@ -1,3 +1,12 @@
+PATH
+  remote: .
+  specs:
+    just-the-docs (0.2.8)
+      bundler (~> 2.1.4)
+      jekyll (>= 3.8.5, < 4.1.0)
+      jekyll-seo-tag (~> 2.0)
+      rake (>= 12.3.1, < 13.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -53,6 +62,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.5)
+    rake (13.0.1)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -77,6 +87,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.0.1)
   jekyll-feed (~> 0.12)
+  just-the-docs!
   minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data
