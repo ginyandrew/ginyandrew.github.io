@@ -1,0 +1,52 @@
+{
+  
+  "0": {
+    "title": "Git basic command line",
+    "content": "Git Command line . . Start | Branch | Disconnect remote repo from local repo | Start . git init . git clone URL . git remote add origin URL connect local repo to remote repo (URL) . git add . all files in the folder . git add -A only changed files . git status . git commit -m &quot;comment&quot; staging . git reset cancel staging . git push origin master . . Branch . git branch check which branch im in . git branch BRANCHNAME create a new branch . git checkout BRANCHNAME switch remote repo to the branch . git push origin BRANCHNAME now push to the switched branch only . . Disconnect remote repo from local repo . It removes .git file to disconnect remote repo from local repo . find ./ -name &quot;.git&quot; | xargs rm -Rf find ./ -name &quot;.gitignore&quot; | xargs rm -Rf .",
+    "url": "http://localhost:4000/docs/20_GitCL/01_git_basic_commandline/",
+    "relUrl": "/docs/20_GitCL/01_git_basic_commandline/"
+  }
+  ,"1": {
+    "title": "JS Basic",
+    "content": "Javascript - Basic . . useful methods | useful methods . Split - String to Array | . var str = &quot;How are you doing today?&quot;; var res = str.split(&quot; &quot;); .",
+    "url": "http://localhost:4000/docs/14_Javascript/01_js_basic/",
+    "relUrl": "/docs/14_Javascript/01_js_basic/"
+  }
+  ,"2": {
+    "title": "Apply Jekyll to Git Page",
+    "content": "Git Command line . . Install Jekyll | Apply jekyll theme | what is Jekyll? | . A Static complier. It complies .md (markdown), .yml to run in WEB. it is built in Ruby. . . Install Jekyll . (1) Install Ruby . go to Ruby and download the most stable version Ruby+Devkit . Double click and install. . (2) Verify the installation . ruby --version . (3) Install Jekyll . gem install Jekyll gem install bundler . (4) add ‘admin’ plug in . open ‘Gemfile’ file from the root folder and add the line below at the bottom . gem &#39;jekyll-admin&#39;, group: :jekyll_plugins . (5) deploy Jekyll again to apply the new admin plug in, and check at admin page . bundle install jekyll serve . . Apply jekyll theme . Search ‘Jekyll free theme’ and download git source , unzip the files and copy all files to the root folder of the github page project | . . Copy all files from theme project to your root project folder, except for _config.xml and gemfile. . compare config.xml and gemfile and edit the original accordingly. . once copy is completed, compile again and run it. . bundle install jekyll serve . Git deploys everytime commit is done. If deployment fails, it sends an warning email to alarm user failure of the deployment with the reason. .",
+    "url": "http://localhost:4000/docs/20_GitCL/02_jekyll_install_and_theme/",
+    "relUrl": "/docs/20_GitCL/02_jekyll_install_and_theme/"
+  }
+  ,"3": {
+    "title": "JS ES6",
+    "content": "Javascript - ES6 . . Promise | Promise . Javascript is single thread and Asynchronous processing model . console.log(&#39;1&#39;); axios.get(&#39;http://localhost:8081/test&#39;).then (function (response){ console.log(2) }) console.log(&#39;3&#39;); . Result ( while waiting for 2nd task to be completed, it continues to move on) . 1,3,2 . to prevent this, we use callback, but it makes using try-catch very difficult. . Promise is a library to resolve this issue, and now ES6 supports it. . . Promise example | . // create promise const thePm = function(value){ return new Promise(function (resolve, reject){ if (value) { resolve(&quot;resolve! &quot;); } else { reject (&quot;reject! &quot;); } }); } // execute promise thePm(true).then(function(result){ console.log(result); // it prints &#39;resolve!&#39; }, function (err){ console.log(err); // it prints &#39;reject!&#39; } ) . Promise example 2 | . // before Promise applied function getData(callbackFunc) { $.get(&#39;http://localhost:8081/test&#39;, function(response) { callbackFunc(response); // received the data from server, and pass to callback function }); } getData(function(result){ console.log(result); // response above is sent to this &#39;result&#39; }) // after Promise applied function getData(callbackFunc) { return new Promise(function(resolve, reject){ // new Promise() is added $.get(&#39;http://localhost:8081/test&#39;, function(response) { resolve(response); // once data is received, call resolve() method. }); }); } getData().then (function(result){ //&#39;then&#39; is added. once getData() above is completed, then- is executed. console.log(result); // response above is sent to this &#39;result&#39; }) .",
+    "url": "http://localhost:4000/docs/14_Javascript/05_js_es6/",
+    "relUrl": "/docs/14_Javascript/05_js_es6/"
+  }
+  ,"4": {
+    "title": "JSON",
+    "content": "Javascript - JSON . . JSON(JavaScript Object Notation) | JSON(JavaScript Object Notation) . JSON.stringify(value) . it turns a JavaScript object into JSON text in a String format. . JSON.parse(value) . it turns JSON text into _Javascript object .",
+    "url": "http://localhost:4000/docs/14_Javascript/10_js_json/",
+    "relUrl": "/docs/14_Javascript/10_js_json/"
+  }
+  ,"6": {
+    "title": "Git and CL",
+    "content": "Git and Command Line . All about Git and Command Line. .",
+    "url": "http://localhost:4000/docs/20_GitCL",
+    "relUrl": "/docs/20_GitCL"
+  }
+  ,"7": {
+    "title": "Home",
+    "content": "Focus on writing good documentation . All about code, project, and daily life . . Getting started .",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  }
+  ,"8": {
+    "title": "Javascript",
+    "content": "Javascript . All about Javascript and ES6 .",
+    "url": "http://localhost:4000/docs/14_Javascript",
+    "relUrl": "/docs/14_Javascript"
+  }
+  
+}
