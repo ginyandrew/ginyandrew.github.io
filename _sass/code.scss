@@ -6,8 +6,8 @@
 code {
   padding: 0.2em 0.15em;
   font-weight: 400;
-  background-color: $code-background-color;
-  border: $border $border-color;
+  background-color: $grey-dk-250;//$code-background-color;
+  border: $border $grey-dk-200;//$border-color;
   border-radius: $border-radius;
 }
 
@@ -16,7 +16,7 @@ figure.highlight {
   padding: $sp-3;
   margin-bottom: 0;
   -webkit-overflow-scrolling: touch;
-  background-color: $code-background-color;
+  background-color: $grey-dk-250; //$code-background-color;
 
   code {
     padding: 0;
@@ -159,7 +159,7 @@ figure.highlight {
   color: #93a1a1;
 } // name.namespace //
 .highlight .nx {
-  color: #555;
+  color: color: #d4d6d6; //#555;
 } // name.other //
 .highlight .py {
   color: #93a1a1;
