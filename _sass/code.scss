@@ -6,8 +6,8 @@
 code {
   padding: 0.2em 0.15em;
   font-weight: 400;
-  background-color: $grey-dk-250;//$code-background-color;
-  border: $border $grey-dk-200;//$border-color;
+  background-color: $grey-dk-250; //$code-background-color;
+  border: $border $grey-dk-250; //$border-color;
   border-radius: $border-radius;
 }
 
@@ -19,6 +19,7 @@ figure.highlight {
   background-color: $grey-dk-250; //$code-background-color;
 
   code {
+    color: #d4d6d6;
     padding: 0;
     border: 0;
   }
@@ -129,7 +130,7 @@ figure.highlight {
   color: #2aa198;
 } // literal.string //
 .highlight .na {
-  color: #555;
+  color: #d4d6d6;
 } // name.attribute //
 .highlight .nb {
   color: #b58900;
@@ -153,13 +154,13 @@ figure.highlight {
   color: #268bd2;
 } // name.function //
 .highlight .nl {
-  color: #555;
+  color: #d4d6d6;
 } // name.label //
 .highlight .nn {
   color: #93a1a1;
 } // name.namespace //
 .highlight .nx {
-  color: color: #d4d6d6; //#555;
+  color: #d4d6d6;  
 } // name.other //
 .highlight .py {
   color: #93a1a1;
