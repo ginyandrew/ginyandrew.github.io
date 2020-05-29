@@ -17,14 +17,14 @@ nav_order: 10
 ## **JSON(JavaScript Object Notation)** 
 
 
-```
+```js
 JSON.stringify(value) 
 ```
 
 it turns a _JavaScript object_ into _JSON text_ in a String format.
 
 
-```
+```js
 JSON.parse(value)
 ```
 

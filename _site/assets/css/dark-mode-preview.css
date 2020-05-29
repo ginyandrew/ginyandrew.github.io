@@ -509,13 +509,13 @@ tbody tr:last-of-type td { padding-bottom: 0.75rem; }
 
 thead th { border-bottom: 1px solid #44434d; }
 
-code { padding: 0.2em 0.15em; font-weight: 400; background-color: #302d36; border: 1px solid #302d36; border-radius: 4px; }
+code { padding: 0.2em 0.15em; font-weight: 400; background-color: #302d36; border: 1px solid #302d36; border-radius: 4px; color: #d4d6d6; }
 
 pre.highlight, figure.highlight { padding: 0.75rem; margin-bottom: 0; -webkit-overflow-scrolling: touch; background-color: #302d36; }
 
 pre.highlight code, figure.highlight code { color: #d4d6d6; padding: 0; border: 0; }
 
-.highlighter-rouge { margin-bottom: 0.75rem; overflow: hidden; border-radius: 4px; }
+.highlighter-rouge { color: #d4d6d6; margin-bottom: 0.75rem; overflow: hidden; border-radius: 4px; }
 
 .highlight .c { color: #586e75; }
 
