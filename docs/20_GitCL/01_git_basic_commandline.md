@@ -70,7 +70,13 @@ Date:   Mon May 25 10:14:46 2020 -0400
 {% endhighlight %}
 
 
-if you want to go back to 2nd commit (starting 20228c91)
+* exclude a file from git add 
+
+```
+git reset HEAD [filename] // if filename is skipped, all staging is reset.
+```
+
+* if you want to go back to 2nd commit (starting 20228c91)
 
 ```
 git reset --hard 20228c91 

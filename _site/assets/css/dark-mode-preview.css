@@ -151,7 +151,7 @@ code { font-family: "SFMono-Regular", Menlo, Consolas, Monospace; font-size: 12p
 
 figure, pre { margin: 0; }
 
-li { margin: 0.25em 0; }
+li { margin: 0.25em 0; color: #2c84fa; }
 
 img { max-width: 100%; height: auto; }
 
