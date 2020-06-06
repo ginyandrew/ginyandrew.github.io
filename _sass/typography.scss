@@ -12,11 +12,14 @@ h1,
 h2,
 .text-beta {
   @include fs-6;
+   
 }
 
 h3,
 .text-gamma {
   @include fs-5;
+  font-weight: 300;
+  background-color: #B0E0E6;    
 }
 
 h4,

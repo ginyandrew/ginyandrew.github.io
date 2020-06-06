@@ -15,7 +15,7 @@ nav_order: 10
 {:toc}
 
 ## **JSON(JavaScript Object Notation)** 
-
+### Methods
 
 ```js
 JSON.stringify(value) 

@@ -14,15 +14,15 @@ nav_order: 1
 1. TOC
 {:toc}
 
-## Basic
 
-
-* ResponseEntity
+## Annotation
+### ResponseEntity
 
 Equal to @ResponseBody, it turns return value to JSON(default) or XML format.
 
 ---
-* Difference Between CrudRepository and JPARepository 
+## JPA
+### Difference Between CrudRepository and JPARepository 
 
 CrudRepository and JPA repository both are the interface of the spring data repository library. 
 **JPA repository extends** CrudRepository and PagingAndSorting repository. It inherits some finders from crud repository such as findOne, gets and removes an entity.

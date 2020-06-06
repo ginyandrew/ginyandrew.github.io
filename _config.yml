@@ -77,7 +77,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Gin's git repo":
-    - "//github.com/ginyandrew.github.io"
+    - "//github.com/ginyandrew/ginyandrew.github.io"
 
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright @Gin Andrew (ginyandrew@gmail.com)"

@@ -1,11 +1,11 @@
 ---
-title: Security
+title: File I/O
 layout: default
 parent: Java
-nav_order: 10
+nav_order: 2
 ---
 
-# Java - Security
+# Java - File I/O
 {: .no_toc }
 
 ## Table of contents
@@ -14,27 +14,27 @@ nav_order: 10
 1. TOC
 {:toc}
 
-## XXS (Sross Site Scripting) Attach 
-
-Users enter the input value with HTML tag (with '< script //>') that can be executed to attack. 
-To dissable, it either needs to 'escape' the HTML tag or assigns the whitelist of allowed inputs and prohibits rest of inputs.
-
-these methods can be implemented either on the client-side(front end) or the server-side (back end).
-
-**Java (server-side) implementation example**
-
-* add apache-commons-text dependency 
-
-```xml
-<dependency>
-	<groupId>org.apache.commons</groupId>
-	<artifactId>commons-text</artifactId>
-	<version>1.8</version>
-</dependency>
-```
-* result
+## what is File I/O
+example 
 
 ```java
-String escaped = StringEscapeUtils.escapeHtml4(param);
-// when param is '<script>', it is transformed to  *&lt;script&gt;*
+public void upload(MultipartFile file) {
+	file.getOriginalFilename();
+	file.getSize();
+		
+	try {
+		FileOutputStream fos = 
+			new FileOutputStream("D:/02_mysite/workspace/NegobillBoot/src/main/resources/static/image/"+ file.getOriginalFilename());
+		InputStream is = file.getInputStream();
+			
+		int readCount = 0;
+		byte[] buffer = new byte[1024];
+		while ((readCount = is.read(buffer)) != -1 ) {
+			fos.write(buffer, 0, readCount);
+		}
+	} catch (Exception e) {
+		throw new RuntimeException( e.getCause());
+		// TODO: handle exception
+	}
+}
 ```

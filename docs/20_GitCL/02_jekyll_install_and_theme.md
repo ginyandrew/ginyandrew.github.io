@@ -16,7 +16,7 @@ nav_order: 2
 
 
 ---
-- **what is Jekyll?**
+## what is Jekyll?
 
 A Static complier. It complies .md (markdown), .yml to run in WEB. it is built in Ruby.
 
@@ -33,13 +33,13 @@ Double click and install.
 
 **(2) Verify the installation**
 
-```
+```shell
 ruby --version
 ```
 
 **(3) Install Jekyll**
 
-```
+```shell
 gem install Jekyll
 
 gem install bundler
@@ -55,7 +55,7 @@ gem 'jekyll-admin', group: :jekyll_plugins
 
 **(5) deploy Jekyll again to apply the new admin plug in, and check at [admin page](http://localhost:4000/admin)**
 
-```
+```shell
 bundle install
 
 jekyll serve
@@ -64,9 +64,7 @@ jekyll serve
 ---
 ## Apply jekyll theme
 
-- **Search 'Jekyll free theme' and download git source , unzip the files and copy all files to the root folder of the github page project**
-
-![](../../assets/images/git002_jekyll.png)
+Search 'Jekyll free theme' and download git source , unzip the files and copy all files to the root folder of the github page project.
 
 Copy all files from theme project to your root project folder, except for _config.xml and gemfile.
 
@@ -74,7 +72,7 @@ compare config.xml and gemfile and edit the original accordingly.
 
 once copy is completed, compile again and run it.
 
-```
+```shell
 bundle install
 
 jekyll serve

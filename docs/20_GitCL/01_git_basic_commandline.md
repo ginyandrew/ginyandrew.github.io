@@ -38,7 +38,7 @@ nav_order: 1
 ---
 
 ## **Advanced**
-* how to revert back to particular commit
+### how to revert back to particular commit 
 
 get commit number which you want to go back to 
 
@@ -70,7 +70,7 @@ Date:   Mon May 25 10:14:46 2020 -0400
 {% endhighlight %}
 
 
-* exclude a file from git add 
+### exclude a file from git add 
 
 ```
 git reset HEAD [filename] // if filename is skipped, all staging is reset.

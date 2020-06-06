@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Others
-nav_order: 15
+nav_order: 30
 has_children: true
 permalink: /docs/30_Others
 ---

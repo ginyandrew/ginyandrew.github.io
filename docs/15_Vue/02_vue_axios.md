@@ -20,7 +20,9 @@ one of HTTP clicnt library. It helps to use Ajax request in Vue.js
 * Ajax (Axynchronous javascript And Xml) - loading data by using XmlHttpRequest (API transferring data between server-web browser) object 
 
 ---
-## how to access to 'this' in axios
+
+## Axios basic
+### how to access to 'this' in axios
 * example
 
 ```js

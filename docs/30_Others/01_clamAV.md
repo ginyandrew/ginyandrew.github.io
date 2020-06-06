@@ -1,5 +1,5 @@
 ---
-title: Basic
+title: ClamAV
 layout: default
 parent: Others
 nav_order: 1
