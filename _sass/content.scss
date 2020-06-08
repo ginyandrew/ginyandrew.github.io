@@ -45,6 +45,7 @@
 
         li {
           &::before {
+            color: $grey-dk-250;
             content: counter(sub-counter, lower-alpha);
             counter-increment: sub-counter;
           }
@@ -57,6 +58,7 @@
     list-style: none;
 
     > li {
+        color: $grey-dk-250;
       &::before {
         position: absolute;
         margin-left: -1.4em;

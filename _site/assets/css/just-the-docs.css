@@ -243,9 +243,11 @@ body { position: relative; padding-bottom: 4rem; }
 
 .page-content ol > li ol { counter-reset: sub-counter; }
 
-.page-content ol > li ol li::before { content: counter(sub-counter, lower-alpha); counter-increment: sub-counter; }
+.page-content ol > li ol li::before { color: #302d36; content: counter(sub-counter, lower-alpha); counter-increment: sub-counter; }
 
 .page-content ul { list-style: none; }
+
+.page-content ul > li { color: #302d36; }
 
 .page-content ul > li::before { position: absolute; margin-left: -1.4em; color: #959396; content: "•"; }
 
