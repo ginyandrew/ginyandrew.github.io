@@ -6,12 +6,13 @@ description: Gin Andrew' blog
 permalink: "/"
 ---
 
+![](assets/images/profile.jpg)
+###### (2017 Dec -  in Dallax, TX)
 # GIN YOUNG ANDREW 
 {: .fs-9 }
 
 {: .fs-6 .fw-300 }
-![](assets/images/profile.jpg)
-###### (2017 Dec -  in Dallax, TX)
+
 
 ---
 <a href="assets/Gin_resume.pdf">[Download Resume]</a>  
