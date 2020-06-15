@@ -8,7 +8,7 @@
   }
   ,"1": {
     "title": "Git basic command line",
-    "content": "Git Command line . . Start | Advanced how to revert back to particular commit | exclude a file from git add | | Branch | Disconnect remote repo from local repo | Start . git init . git clone URL . git remote add origin URL connect local repo to remote repo (URL) . git add . all files in the folder . git add -A only changed files . git status . git commit -m &quot;comment&quot; staging . git reset cancel staging . git push origin master . . Advanced . how to revert back to particular commit . get commit number which you want to go back to . $ git log . result . commit 6843810259be199b6ce28529db23eef77b5f75c8 (HEAD -&gt; master, origin/master, origin/HEAD) Author: ginyandrew &lt;ginyandrew@gmail.com&gt; Date: Mon May 25 10:28:08 2020 -0400 customize jekyll theme code color commit 20228c91928378c63d7d751378073480e9a44db6 Author: ginyandrew &lt;ginyandrew@gmail.com&gt; Date: Mon May 25 10:18:06 2020 -0400 update code css commit 65f84e5039bafd09c3c048a1db083f8ed1fe3f0c Author: ginyandrew &lt;ginyandrew@gmail.com&gt; Date: Mon May 25 10:14:46 2020 -0400 update config . exclude a file from git add . git reset HEAD [filename] // if filename is skipped, all staging is reset. . if you want to go back to 2nd commit (starting 20228c91) | . git reset --hard 20228c91 git push -f origin master(branch name) . Warning it removes entire commit history . Branch . git branch check which branch im in . git branch BRANCHNAME create a new branch . git checkout BRANCHNAME switch remote repo to the branch . git push origin BRANCHNAME now push to the switched branch only . . Disconnect remote repo from local repo . It removes .git file to disconnect remote repo from local repo . find ./ -name &quot;.git&quot; | xargs rm -Rf find ./ -name &quot;.gitignore&quot; | xargs rm -Rf .",
+    "content": "Git Command line . . Start | Advanced how to revert back to particular commit (eg. to 2nd commit, starting 20228c91) | Unstaging (Reset git add if it’s not pushed.) | | Branch | Disconnect remote repo from local repo | Start . git init . git clone URL . git remote add origin URL connect local repo to remote repo (URL) . git add . all files in the folder . git add -A only changed files . git status . git commit -m &quot;comment&quot; staging . git reset cancel staging . git push origin master . . Advanced . how to revert back to particular commit (eg. to 2nd commit, starting 20228c91) . get commit number which you want to go back to . $ git log . result . commit 6843810259be199b6ce28529db23eef77b5f75c8 (HEAD -&gt; master, origin/master, origin/HEAD) Author: ginyandrew &lt;ginyandrew@gmail.com&gt; Date: Mon May 25 10:28:08 2020 -0400 #customize jekyll theme code color commit 20228c91928378c63d7d751378073480e9a44db6 Author: ginyandrew &lt;ginyandrew@gmail.com&gt; Date: Mon May 25 10:18:06 2020 -0400 #update code css commit 65f84e5039bafd09c3c048a1db083f8ed1fe3f0c Author: ginyandrew &lt;ginyandrew@gmail.com&gt; Date: Mon May 25 10:14:46 2020 -0400 #update config . git reset --hard 20228c91 git push -f origin master(branch name) . Warning it removes entire commit history . Unstaging (Reset git add if it’s not pushed.) . git reset HEAD [filename] # if filename is skipped, all staging is reset. . . Branch . git branch check which branch im in . git branch BRANCHNAME create a new branch . git checkout BRANCHNAME switch remote repo to the branch . git push origin BRANCHNAME now push to the switched branch only . . Disconnect remote repo from local repo . It removes .git file to disconnect remote repo from local repo . find ./ -name &quot;.git&quot; | xargs rm -Rf find ./ -name &quot;.gitignore&quot; | xargs rm -Rf .",
     "url": "http://localhost:4000/docs/20_GitCL/01_git_basic_commandline/",
     "relUrl": "/docs/20_GitCL/01_git_basic_commandline/"
   }
@@ -32,7 +32,7 @@
   }
   ,"5": {
     "title": "Basic",
-    "content": "Vue - Basic . . Vue Life Cycle | Vue Life Cycle . Creation : before Component is added to DOM / can’t access to this.$el beforeCreate - data/events are not set up yet, can’t access to them | created - now can access to data/event | . | Mounting beforeMount | mounted | . | Updating beforeUpdate | . | Descruction beforeDestroy | destroyed | . |",
+    "content": "Vue - Basic . . Basic Vue Config setup | How to initiate a new Vue project | how to integrate Vue project in Spring boot | . ##Basic NPM command line . . Basic Vue Config setup . how to chage port number of vue-cli project : in webpack.config.js, . module: { devServer: { port: 9000} } . . How to initiate a new Vue project . check if vue is installed and version. if not installed, install it. . vue --version #@vue/cli 4.3.1 npm install -g @vue/cli vue create myProjectName #select &#39;default&#39; and all pre-set selected options and complete installing. . Once the installation is completed, you can run the Vue server. . npm run serve # DONE Compiled successfully in 3655ms4:40:06 PM #&lt;s&gt; [webpack.Progress] 100% # App running at: # - Local: http://localhost:8080/ # - Network: http://192.168.1.163:8080/ . Tada ~ . . . how to integrate Vue project in Spring boot . Once spring boot is initiated, move to SpringProjectName/src. In Src folder, initiate a new Vue Project. . Gin@DESKTOP- .. workspace/SpringProjectName/src (master) $ vue create vue-project-name # vue project is initiated. $ cd vue-project-name Gin@DESKTOP- .. workspace/SpringProjectName/src/vue-project-name (master) . now, set up where dist folder (compiled file of Vue project) will be created. . create a new file ‘vue.config.js’ in /ProjectName/src/vue-project-name (root folder of Vue project) with the json below. . module.exports= { outputDir: &quot;../main/resources/static&quot;, indexPath: &quot;../static/index.html&quot; } . now build the vue project. . npm run build . and you can see the dist folder with Vue compiled files in /src/main/resources/static folder. . . Now run the spring boot project. check the port number in application.properties file. . server.port=8081 . once Spring project is running, you can check at http://localhost:8081/index.html .",
     "url": "http://localhost:4000/docs/15_Vue/01_vue_basic/",
     "relUrl": "/docs/15_Vue/01_vue_basic/"
   }
@@ -61,66 +61,84 @@
     "relUrl": "/docs/15_Vue/02_vue_axios/"
   }
   ,"10": {
+    "title": "Network",
+    "content": "Network . .",
+    "url": "http://localhost:4000/docs/30_Others/03_Network/",
+    "relUrl": "/docs/30_Others/03_Network/"
+  }
+  ,"11": {
+    "title": "Deploy Boot+Vue",
+    "content": "How to deploy Spring Boot + Vue project with external Tomcat . . Prepare physical server - Respberry PI 4 | Install Tomcat | Set up &amp; Build Spring Boot project | Set up &amp; Build Vue project | Prepare physical server - Respberry PI 4 . Once decided to use Raspberry PI, (chose it solely for ‘no extra cost’) need to know how to deploy it by using an external Tomcat… . Rasberry PI parts to purchase - RAS PI RASPBERRY PI 4 - 8GB | RAS PI 15W POWER SUPPLY WH | MICROCONN MICROCONN PI 4 ALM CASE | KING** 64GB MicroSD W/ADP CL10 (will become a main storage space for O/S…) | . | . Raspberry PI turns on when it’s plugged in automatically. Burn the OS installation image on the microSD card, and assemble the parts and plug it in the power. It has already wifi - . Install Tomcat . My java project uses the java ver. 11. so choose Tomcat version 9 or above. already had 1.8 installed but it caused some error, so removed 1.8… . Eclipse setting Properties -&gt; Java Compiler -&gt; compliance level ( set to 11) | Properties -&gt; Java Build Path -&gt; JavaSE-11 | . | . Set up &amp; Build Spring Boot project . pom.xml | . ... &lt;parent&gt; ... &lt;/parent&gt; &lt;!--SpringBoot should be built as a .jar.. --&gt; &lt;packaging&gt;jar&lt;/packaging&gt; ... &lt;properties&gt; &lt;java.version&gt;1.11&lt;/java.version&gt; &lt;/properties&gt; &lt;dependencies&gt; ... &lt;!-- these 2 dependencies cover JPA/Hibernate. Remove &#39;hibernate-core&#39; and &#39;hibernate-entitymanager&#39; to avoid conflict. --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt; &lt;scope&gt;provided&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.data&lt;/groupId&gt; &lt;artifactId&gt;spring-data-jpa&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!--got some error since javax- was missing. added it as well --&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;jstl&lt;/artifactId&gt; &lt;scope&gt;provided&lt;/scope&gt; &lt;/dependency&gt; ... &lt;/dependencies&gt; &lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt; &lt;!-- To set the java version for compiler --&gt; &lt;configuration&gt; &lt;source&gt;1.11&lt;/source&gt; &lt;target&gt;1.11&lt;/target&gt; &lt;/configuration&gt; ... . MyApplication.java | . @SpringBootApplication public class MyApplication extends SpringBootServletInitializer{ // extends SpringBootServletInitializer for external deployment ... @Override protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) { return builder.sources(MyApplication.class); } ... } . ..Repository.java | . @Repository // make sure Repository classes have the annotation &#39;repository&#39; public interface CareRepository extends JpaRepository&lt;CareVO, Integer&gt;{ ... . In Eclipse, Project -&gt; Run as -&gt; Run Configuration, empty Profiles and put ‘package’ in Goals . . Once the configuration is created, it can build jar in projectRoot/target folder. . . . copy the jar file into Tomcat/webapps folder. . . run Tomcat by using command line. . ... apache-tomcat-9.0.35 webapps&gt;java -jar NegobillBoot1-1.jar # jar file name in webapps. . . Set up &amp; Build Vue project . webpack.config.js | . module.exports = { entry: &#39;./src/main.js&#39;, output: { path: path.resolve(__dirname, &#39;./dist&#39;), publicPath: &#39;./dist/&#39;, // tomcat will look for build.js file in the child folder &#39;dist&#39; of the folder index.html located. filename: &#39;build.js&#39; }, ... . run the CL below to build .js files in /dist folder. . npm run build # it builds files in &#39;dist&#39; folder. . main.html, index.html and /dist are static files that will be deployed by Tomcat. . copy the static files into Tomcat folder. (inside webapps/projectName) . by using CommandLind, move to apache-tomcat-9.0.35 bin and run tomcat. . startup.bat # it starts tomcat shutdown.bat # it shutdown tomcat. . To run both services, added one more port into server.xml of Tomcat. (add one more service tag and change service name/ connector port/redirectPort/ and appBase.) . &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt; ... &lt;!--first service for Spring boot--&gt; &lt;Service name=&quot;Catalina&quot;&gt; &lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8442&quot; /&gt;... &lt;Host name=&quot;localhost&quot; appBase=&quot;webapps&quot; unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;... &lt;/Service&gt; &lt;!--first service for Vue --&gt; &lt;Service name=&quot;Catalina2&quot;&gt; &lt;!--appBase should have full path of Tomcat&#39;s webapps folder --&gt; &lt;Connector port=&quot;9000&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;... &lt;Host name=&quot;localhost&quot; appBase=&quot;D:/...skip.../apache-tomcat-9.0.35/webapps/negobill&quot; unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;... &lt;/Service&gt; &lt;/Server&gt; . can access to the app at : localhost:9000/negobill(folder name in Tomcat webapps folder)/index.html . .",
+    "url": "http://localhost:4000/docs/18_Spring/03_spring_deploy/",
+    "relUrl": "/docs/18_Spring/03_spring_deploy/"
+  }
+  ,"12": {
+    "title": "lifecycle",
+    "content": "Vue lifecycle . . Begin | Begin . a | b | c | d |",
+    "url": "http://localhost:4000/docs/15_Vue/03_vue_lifecycle/",
+    "relUrl": "/docs/15_Vue/03_vue_lifecycle/"
+  }
+  ,"13": {
     "title": "File I/O",
     "content": "Java - File I/O . . what is File I/O | what is File I/O . example . public void upload(MultipartFile file) { file.getOriginalFilename(); file.getSize(); try { FileOutputStream fos = new FileOutputStream(&quot;D:/02_mysite/workspace/NegobillBoot/src/main/resources/static/image/&quot;+ file.getOriginalFilename()); InputStream is = file.getInputStream(); int readCount = 0; byte[] buffer = new byte[1024]; while ((readCount = is.read(buffer)) != -1 ) { fos.write(buffer, 0, readCount); } } catch (Exception e) { throw new RuntimeException( e.getCause()); // TODO: handle exception } } .",
     "url": "http://localhost:4000/docs/10_Java/05_java_file/",
     "relUrl": "/docs/10_Java/05_java_file/"
   }
-  ,"11": {
+  ,"14": {
     "title": "JS ES6",
     "content": "Javascript - ES6 . . Promise | Promise . Javascript is single thread and Asynchronous processing model . console.log(&#39;1&#39;); axios.get(&#39;http://localhost:8081/test&#39;).then (function (response){ console.log(2) }) console.log(&#39;3&#39;); . Result ( while waiting for 2nd task to be completed, it continues to move on) . 1,3,2 . to prevent this, we use callback, but it makes using try-catch very difficult. . Promise is a library to resolve this issue, and now ES6 supports it. . . Promise example | . // create promise const thePm = function(value){ return new Promise(function (resolve, reject){ if (value) { resolve(&quot;resolve! &quot;); } else { reject (&quot;reject! &quot;); } }); } // execute promise thePm(true).then(function(result){ console.log(result); // it prints &#39;resolve!&#39; }, function (err){ console.log(err); // it prints &#39;reject!&#39; } ) . Promise example 2 | . // before Promise applied function getData(callbackFunc) { $.get(&#39;http://localhost:8081/test&#39;, function(response) { callbackFunc(response); // received the data from server, and pass to callback function }); } getData(function(result){ console.log(result); // response above is sent to this &#39;result&#39; }) // after Promise applied function getData(callbackFunc) { return new Promise(function(resolve, reject){ // new Promise() is added $.get(&#39;http://localhost:8081/test&#39;, function(response) { resolve(response); // once data is received, call resolve() method. }); }); } getData().then (function(result){ //&#39;then&#39; is added. once getData() above is completed, then- is executed. console.log(result); // response above is sent to this &#39;result&#39; }) .",
     "url": "http://localhost:4000/docs/14_Javascript/05_js_es6/",
     "relUrl": "/docs/14_Javascript/05_js_es6/"
   }
-  ,"12": {
+  ,"15": {
     "title": "Security",
     "content": "Java - Security . . XXS (Sross Site Scripting) Attach | XXS (Sross Site Scripting) Attach . Users enter the input value with HTML tag (with ‘&lt; script //&gt;’) that can be executed to attack. To dissable, it either needs to ‘escape’ the HTML tag or assigns the whitelist of allowed inputs and prohibits rest of inputs. . these methods can be implemented either on the client-side(front end) or the server-side (back end). . Java (server-side) implementation example . add apache-commons-text dependency | . &lt;dependency&gt; &lt;groupId&gt;org.apache.commons&lt;/groupId&gt; &lt;artifactId&gt;commons-text&lt;/artifactId&gt; &lt;version&gt;1.8&lt;/version&gt; &lt;/dependency&gt; . result | . String escaped = StringEscapeUtils.escapeHtml4(param); // when param is &#39;&lt;script&gt;&#39;, it is transformed to *&amp;lt;script&amp;gt;* .",
     "url": "http://localhost:4000/docs/10_Java/10_java_security/",
     "relUrl": "/docs/10_Java/10_java_security/"
   }
-  ,"13": {
+  ,"16": {
     "title": "JSON",
     "content": "Javascript - JSON . . JSON(JavaScript Object Notation) Methods | | JSON(JavaScript Object Notation) . Methods . JSON.stringify(value) . it turns a JavaScript object into JSON text in a String format. . JSON.parse(value) . it turns JSON text into _Javascript object .",
     "url": "http://localhost:4000/docs/14_Javascript/10_js_json/",
     "relUrl": "/docs/14_Javascript/10_js_json/"
   }
-  ,"15": {
+  ,"18": {
     "title": "Git and CL",
     "content": "Git and Command Line . All about Git and Command Line. .",
     "url": "http://localhost:4000/docs/20_GitCL",
     "relUrl": "/docs/20_GitCL"
   }
-  ,"16": {
+  ,"19": {
     "title": "Home",
-    "content": "GIN YOUNG ANDREW . . (2017 Dec - in Dallax, TX) . . [Download Resume] . Technical Skills . Java . Javascript . , JSP . JSF . JSTL . JDBC . HTML5 . CSS3 . Bootstrap . Vue.js . jQuery . XML . JSON . Spring MVC/Boot . JPA . JUnit . Mockito . H2 . MySQL . Oracle SQL . Git . CVS . Ant . Maven . SOAP . Microservices . . Work Experience . Software Analyst at GE Aviation (in contract) – Cincinnati, OH (06/2018 to Present) Debug, fix, and upgrade the intranet applications written in JSF and jBoss and keep production environment operational | Analyze codes of Spring projects including PL/SQL, XML scripts to find the programming defect and data mis-integrity and ensure continuous stable operation of the applications | . | Web Developer at Revature – Reston, VA (01/2018 to 05/2018) Develop web applications including test codes by using Java, Angular 4, Oracle SQL, and Microservice | Contribute as a full stack developer for an optimal REST configurations by practicing SOAP, REST API, WSDL, Service Oriented Architecture (SOA) | Construct a testing framework using JUnit to ensure the continous flawless code | . | Full Stack Developer at Digital One - Seoul, South Korea (03/2016 to 12/2016) Build the internal scheduler application by using Apache Velocity for Osstem Implant company | Build the point management application Clip by using Kakao Geography API , MySQL, and Spring MVC framework | . | Site manager at Bomnib - WFH (2005 to present) Maintain Bomnib, a family-owned business owned by my parents. it’s built on the e-commerce platform Cafe24 since 2005. Update the front-end code to make it fit into the mobile devices and implement the user convenient functionalities | . | . .",
+    "content": ". (2017 Dec - in Dallax, TX) . GIN YOUNG ANDREW . . [Download Resume] . Technical Skills . Java . Javascript . , JSP . JSF . JSTL . JDBC . HTML5 . CSS3 . Bootstrap . Vue.js . jQuery . XML . JSON . Spring MVC/Boot . JPA . JUnit . Mockito . H2 . MySQL . Oracle SQL . Git . CVS . Ant . Maven . SOAP . Microservices . . Work Experience . Software Analyst at GE Aviation (in contract) – Cincinnati, OH (06/2018 to Present) Debug, fix, and upgrade the intranet applications written in JSF and jBoss and keep production environment operational | Analyze codes of Spring projects including PL/SQL, XML scripts to find the programming defect and data mis-integrity and ensure continuous stable operation of the applications | . | Web Developer at Revature – Reston, VA (01/2018 to 05/2018) Develop web applications including test codes by using Java, Angular 4, Oracle SQL, and Microservice | Contribute as a full stack developer for an optimal REST configurations by practicing SOAP, REST API, WSDL, Service Oriented Architecture (SOA) | Construct a testing framework using JUnit to ensure the continous flawless code | . | Full Stack Developer at Digital One - Seoul, South Korea (03/2016 to 12/2016) Build the internal scheduler application by using Apache Velocity for Osstem Implant company | Build the point management application Clip by using Kakao Geography API , MySQL, and Spring MVC framework | . | Site manager at Bomnib - WFH (2005 to present) Maintain Bomnib, a family-owned business owned by my parents. it’s built on the e-commerce platform Cafe24 since 2005. Update the front-end code to make it fit into the mobile devices and implement the user convenient functionalities | . | . .",
     "url": "http://localhost:4000/",
     "relUrl": "/"
   }
-  ,"17": {
+  ,"20": {
     "title": "Java",
     "content": "Java . All about Java .",
     "url": "http://localhost:4000/docs/10_Java",
     "relUrl": "/docs/10_Java"
   }
-  ,"18": {
+  ,"21": {
     "title": "Javascript",
     "content": "Javascript . All about Javascript and ES6 .",
     "url": "http://localhost:4000/docs/14_Javascript",
     "relUrl": "/docs/14_Javascript"
   }
-  ,"19": {
+  ,"22": {
     "title": "Others",
     "content": "Others . Anything I learn .",
     "url": "http://localhost:4000/docs/30_Others",
     "relUrl": "/docs/30_Others"
   }
-  ,"20": {
+  ,"23": {
     "title": "Spring",
     "content": "Spring . All about Spring framework .",
     "url": "http://localhost:4000/docs/18_Spring",
     "relUrl": "/docs/18_Spring"
   }
-  ,"21": {
+  ,"24": {
     "title": "Vue JS",
     "content": "Vue . All about Vue.js .",
     "url": "http://localhost:4000/docs/15_Vue",
