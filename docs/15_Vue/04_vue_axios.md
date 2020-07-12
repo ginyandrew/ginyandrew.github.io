@@ -2,7 +2,7 @@
 title: Axios
 layout: default
 parent: Vue JS
-nav_order: 2
+nav_order: 4
 ---
 
 # Vue - Axios 

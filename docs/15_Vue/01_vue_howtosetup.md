@@ -1,11 +1,11 @@
 ---
-title: Basic
+title: How to set up Vue project
 layout: default
 parent: Vue JS
 nav_order: 1
 ---
 
-# Vue - Basic 
+# Vue - How to set up Vue Project 
 {: .no_toc }
 
 ## Table of contents
@@ -13,9 +13,6 @@ nav_order: 1
 
 1. TOC
 {:toc}
-
----
-##Basic NPM command line 
 
 
 ---

@@ -31,10 +31,10 @@
     "relUrl": "/docs/18_Spring/01_spring_basic/"
   }
   ,"5": {
-    "title": "Basic",
-    "content": "Vue - Basic . . Basic Vue Config setup | How to initiate a new Vue project | how to integrate Vue project in Spring boot | . ##Basic NPM command line . . Basic Vue Config setup . how to chage port number of vue-cli project : in webpack.config.js, . module: { devServer: { port: 9000} } . . How to initiate a new Vue project . check if vue is installed and version. if not installed, install it. . vue --version #@vue/cli 4.3.1 npm install -g @vue/cli vue create myProjectName #select &#39;default&#39; and all pre-set selected options and complete installing. . Once the installation is completed, you can run the Vue server. . npm run serve # DONE Compiled successfully in 3655ms4:40:06 PM #&lt;s&gt; [webpack.Progress] 100% # App running at: # - Local: http://localhost:8080/ # - Network: http://192.168.1.163:8080/ . Tada ~ . . . how to integrate Vue project in Spring boot . Once spring boot is initiated, move to SpringProjectName/src. In Src folder, initiate a new Vue Project. . Gin@DESKTOP- .. workspace/SpringProjectName/src (master) $ vue create vue-project-name # vue project is initiated. $ cd vue-project-name Gin@DESKTOP- .. workspace/SpringProjectName/src/vue-project-name (master) . now, set up where dist folder (compiled file of Vue project) will be created. . create a new file ‘vue.config.js’ in /ProjectName/src/vue-project-name (root folder of Vue project) with the json below. . module.exports= { outputDir: &quot;../main/resources/static&quot;, indexPath: &quot;../static/index.html&quot; } . now build the vue project. . npm run build . and you can see the dist folder with Vue compiled files in /src/main/resources/static folder. . . Now run the spring boot project. check the port number in application.properties file. . server.port=8081 . once Spring project is running, you can check at http://localhost:8081/index.html .",
-    "url": "http://localhost:4000/docs/15_Vue/01_vue_basic/",
-    "relUrl": "/docs/15_Vue/01_vue_basic/"
+    "title": "How to set up Vue project",
+    "content": "Vue - How to set up Vue Project . . Basic Vue Config setup | How to initiate a new Vue project | how to integrate Vue project in Spring boot | . Basic Vue Config setup . how to chage port number of vue-cli project : in webpack.config.js, . module: { devServer: { port: 9000} } . . How to initiate a new Vue project . check if vue is installed and version. if not installed, install it. . vue --version #@vue/cli 4.3.1 npm install -g @vue/cli vue create myProjectName #select &#39;default&#39; and all pre-set selected options and complete installing. . Once the installation is completed, you can run the Vue server. . npm run serve # DONE Compiled successfully in 3655ms4:40:06 PM #&lt;s&gt; [webpack.Progress] 100% # App running at: # - Local: http://localhost:8080/ # - Network: http://192.168.1.163:8080/ . Tada ~ . . . how to integrate Vue project in Spring boot . Once spring boot is initiated, move to SpringProjectName/src. In Src folder, initiate a new Vue Project. . Gin@DESKTOP- .. workspace/SpringProjectName/src (master) $ vue create vue-project-name # vue project is initiated. $ cd vue-project-name Gin@DESKTOP- .. workspace/SpringProjectName/src/vue-project-name (master) . now, set up where dist folder (compiled file of Vue project) will be created. . create a new file ‘vue.config.js’ in /ProjectName/src/vue-project-name (root folder of Vue project) with the json below. . module.exports= { outputDir: &quot;../main/resources/static&quot;, indexPath: &quot;../static/index.html&quot; } . now build the vue project. . npm run build . and you can see the dist folder with Vue compiled files in /src/main/resources/static folder. . . Now run the spring boot project. check the port number in application.properties file. . server.port=8081 . once Spring project is running, you can check at http://localhost:8081/index.html .",
+    "url": "http://localhost:4000/docs/15_Vue/01_vue_howtosetup/",
+    "relUrl": "/docs/15_Vue/01_vue_howtosetup/"
   }
   ,"6": {
     "title": "Docker and Jenkins",
@@ -55,16 +55,16 @@
     "relUrl": "/docs/18_Spring/02_spring_annotation/"
   }
   ,"9": {
-    "title": "Axios",
-    "content": "Vue - Axios . . What is Axios ? | Axios basic how to access to ‘this’ in axios | | What is Axios ? . one of HTTP clicnt library. It helps to use Ajax request in Vue.js . Ajax (Axynchronous javascript And Xml) - loading data by using XmlHttpRequest (API transferring data between server-web browser) object | . . Axios basic . how to access to ‘this’ in axios . example | . data: function(){ return { param: &quot;&quot;} }, methods() { getFnc: function(){ var self = this; axios.get(&quot;url&quot;).then (function(response){ self.param = response.data; }) } } .",
-    "url": "http://localhost:4000/docs/15_Vue/02_vue_axios/",
-    "relUrl": "/docs/15_Vue/02_vue_axios/"
+    "title": "Vue Basic",
+    "content": "Vue - Basic . . What is directive? | Frequently used directive | Vue Component | Vue Props | Vue Emit | . What is directive? . a directive is some special token in the markup that tells the library to do something to a DOM element. it renders dom elements. . . Frequently used directive . v-if . &lt;div&gt; Hello &lt;span v-if=&quot;show&quot;&gt;show me if true&lt;/span&gt; &lt;/div&gt; . new Vue({ data: { show: false } }) . v-for . &lt;ul&gt; &lt;li v-for=&quot;item in items&quot;&gt;&lt;/li&gt; &lt;/ul&gt; . new Vue({ data: { items: [&#39;apple&#39;, &#39;banana&#39;, &#39;strawberry&#39;] } }) . v-bind . &lt;!-- why use v-bind, instead of { { } } ? : double mustach can&#39;t be used in HTML attribute.--&gt; &lt;a href=&quot;{ { link } }&quot;&gt;google link &lt;/a&gt; . &lt;div id=&quot;app&quot;&gt; &lt;a v-bind:href=&quot;link&quot;&gt;google link&lt;/a&gt; &lt;/div&gt; . //this is appropriate way to bind vue data in dom new Vue({ el: &quot;#app&quot;, data: { link:&quot;https://google.com&quot; } }) . v-model . &lt;div id=&quot;app&quot;&gt; &lt;input type=&quot;text&quot; v-model=&quot;businessname&quot;&gt; { { businessname } } &lt;/div&gt; . /* while double mustach { { } } is one-way data binding (only reflecting data), v-model is two-way data binding and user input change vue data */ new Vue({ el: &quot;#app&quot;, data: { businessname: &quot;sandwichshop&quot; } }) . Vue Component . How to create component . // create &#39;header&#39; component. Vue.component(&#39;header&#39;, { // &#39;header&#39; - app-component name template: &#39;&lt;h1&gt;Top header component&lt;/h1&gt;&#39; }); . &lt;!-- now we insert the &#39;header&#39; component in single page application. --&gt; &lt;div id=&quot;app&quot;&gt; &lt;header&gt;&lt;/header&gt; &lt;/div&gt; &lt;!-- it will be rendered like this. --&gt; &lt;div id=&quot;app&quot;&gt; &lt;h1&gt;Top header component&lt;/h1&gt; &lt;/div&gt; . Vue Props . Props is used to send data from parent to child component. . // parent component (app) - send &#39;message&#39; to childComponent. new Vue({ el: &#39;#app&#39;, components: { &#39;child-component&#39;: childComponent }, data: { message: &#39;this is message from parent component. &#39; } }) . // childComponent var childComponent = { props: [&#39;parentmessage&#39;], template: &#39;&lt;p&gt;{ { parentmessage } }&lt;/p&gt;&#39; } . &lt;div id=&quot;app&quot;&gt; &lt;child-component v-bind:parentmessage=&quot;message&quot;&gt;&lt;/child-component&gt; &lt;!-- it will print &#39;this is message from parent component.&#39; --&gt; &lt;/div&gt; . Vue Emit . Emit is used to send data from child to parent component. . . Original code js // parent component new Vue({ el: &#39;#app&#39;, components: { &#39;child-component&#39;: childComponent }, methods: { showAlert: function() { alert(&#39;child is sending this alert!&#39;); } } }) js // childComponent var childComponent = { methods: { sendEvent: function() { this.$emit(&#39;update&#39;); } } } html .",
+    "url": "http://localhost:4000/docs/15_Vue/02_vue_basic/",
+    "relUrl": "/docs/15_Vue/02_vue_basic/"
   }
   ,"10": {
-    "title": "Network",
-    "content": "Network . .",
-    "url": "http://localhost:4000/docs/30_Others/03_Network/",
-    "relUrl": "/docs/30_Others/03_Network/"
+    "title": "Linux Commandline",
+    "content": "Linux CommandLine . . adduser _user123_ #user123 is the name of a new user #it will ask a password for user123 -aG sudo user123 # assign sudo privilege to user123 sudo su - user123 # switch a Terminal user to user123 sudo apt update #update apt sudo groupadd tomcat #create a new group &#39;tomcat&#39; curl -O http://miroors.../tomcat.tar.gz #URL of file download cd /temp # if starts with &#39;/&#39;, it&#39;s absolute path. (root)/temp ls -al / sudo mkdir /opt/tomcat #create &#39;tomcat&#39; folder in (root)/opt folder sudo tar xzvf apache-..tar.gz -C /opt/tomcat --strip-components=1 #install tomcat file (apache-..tar.gz) in /opt/tomcat folder chgrp --help #if wanna know how to use command line (eg- &#39;chrgp&#39;) , then check with --help sudo chgrp -R tomcat /opt/tomcat # assign the group of &#39;tomcat&#39; to sudo for all folders in /opt/tomcat ls /opt/tomcat sudo chmod -R g+r conf sudo chmod g+x conf sudo chown -R tomcat wepapps/ work/ temp/ logs/ sudo update-java-alternatives -l #check &#39;JAVA_HOME&#39; environmental variable in Linux sudo ufw allow 8080 #open firewall to port 8080 ip addr show #check ip address - inet sudo systemctl status tomcat #can check if tomcat is runnning or not sudo /opt/tomcat/bin/startup.sh tail -f /opt/tomcat/logs/catalina.-.log #log file name, it reads an active live log file sudo nano filename.txt #text editor sudo apt seaerch #search available apt packages sudo apt install notepadqq #install program by using apt (eg- notepad++) sudo ufw status # check firewall status with open ports sudo ufw allow 22 # it opens port 22 on firewall sudo ufw deny 22 # it closes port 22 on firewall ps -ef | grep java # it grabs pid of executed java sudo kill -9 &lt;pid&gt; . mysql . sudo service mysql start #start mysql server sudo service mysql restart #restart mysql server sudo mysql -u root -p #login mysql as root quit #exit mysql # create user &#39;username123&#39; at server1 and allow its access to server1. server2 can access to server1 by using &#39;username123&#39;. CREATE USER &#39;username123&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;some_password&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;username123&#39;@&#39;localhost&#39; WITH GRANT OPTION; CREATE USER &#39;username123&#39;@&#39;%&#39; IDENTIFIED BY &#39;some_password&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;username123&#39;@&#39;%&#39; WITH GRANT OPTION; . .",
+    "url": "http://localhost:4000/docs/30_Others/03_LinuxCL/",
+    "relUrl": "/docs/30_Others/03_LinuxCL/"
   }
   ,"11": {
     "title": "Deploy Boot+Vue",
@@ -79,66 +79,84 @@
     "relUrl": "/docs/15_Vue/03_vue_lifecycle/"
   }
   ,"13": {
+    "title": "Github Markdown",
+    "content": "Github Markdown . . Languages supported by Github Markdown | Languages supported by Github Markdown . actionscript3 | apache | applescript | asp | brainfuck | c | cfm | clojure | cmake | coffee-script, coffeescript, coffee | cpp - C++ | cs | csharp | css | csv | bash | diff | elixir | erb - HTML + Embedded Ruby | go | haml | http | java | javascript | json | jsx | less | lolcode | make - Makefile | markdown | matlab | nginx | objectivec | pascal | PHP | Perl | python | profile - python profiler output | rust | salt, saltstate - Salt | shell, sh, zsh, bash - Shell scripting | sql | scss | sql | svg | swift | rb, jruby, ruby - Ruby | smalltalk | vim, viml - Vim Script | volt | vhdl | vue | xml - XML and also used for HTML with inline CSS and Javascript | yaml | .",
+    "url": "http://localhost:4000/docs/30_Others/04_Markdown/",
+    "relUrl": "/docs/30_Others/04_Markdown/"
+  }
+  ,"14": {
+    "title": "Axios",
+    "content": "Vue - Axios . . What is Axios ? | Axios basic how to access to ‘this’ in axios | | What is Axios ? . one of HTTP clicnt library. It helps to use Ajax request in Vue.js . Ajax (Axynchronous javascript And Xml) - loading data by using XmlHttpRequest (API transferring data between server-web browser) object | . . Axios basic . how to access to ‘this’ in axios . example | . data: function(){ return { param: &quot;&quot;} }, methods() { getFnc: function(){ var self = this; axios.get(&quot;url&quot;).then (function(response){ self.param = response.data; }) } } .",
+    "url": "http://localhost:4000/docs/15_Vue/04_vue_axios/",
+    "relUrl": "/docs/15_Vue/04_vue_axios/"
+  }
+  ,"15": {
     "title": "File I/O",
     "content": "Java - File I/O . . what is File I/O | what is File I/O . example . public void upload(MultipartFile file) { file.getOriginalFilename(); file.getSize(); try { FileOutputStream fos = new FileOutputStream(&quot;D:/02_mysite/workspace/NegobillBoot/src/main/resources/static/image/&quot;+ file.getOriginalFilename()); InputStream is = file.getInputStream(); int readCount = 0; byte[] buffer = new byte[1024]; while ((readCount = is.read(buffer)) != -1 ) { fos.write(buffer, 0, readCount); } } catch (Exception e) { throw new RuntimeException( e.getCause()); // TODO: handle exception } } .",
     "url": "http://localhost:4000/docs/10_Java/05_java_file/",
     "relUrl": "/docs/10_Java/05_java_file/"
   }
-  ,"14": {
+  ,"16": {
     "title": "JS ES6",
     "content": "Javascript - ES6 . . Promise | Promise . Javascript is single thread and Asynchronous processing model . console.log(&#39;1&#39;); axios.get(&#39;http://localhost:8081/test&#39;).then (function (response){ console.log(2) }) console.log(&#39;3&#39;); . Result ( while waiting for 2nd task to be completed, it continues to move on) . 1,3,2 . to prevent this, we use callback, but it makes using try-catch very difficult. . Promise is a library to resolve this issue, and now ES6 supports it. . . Promise example | . // create promise const thePm = function(value){ return new Promise(function (resolve, reject){ if (value) { resolve(&quot;resolve! &quot;); } else { reject (&quot;reject! &quot;); } }); } // execute promise thePm(true).then(function(result){ console.log(result); // it prints &#39;resolve!&#39; }, function (err){ console.log(err); // it prints &#39;reject!&#39; } ) . Promise example 2 | . // before Promise applied function getData(callbackFunc) { $.get(&#39;http://localhost:8081/test&#39;, function(response) { callbackFunc(response); // received the data from server, and pass to callback function }); } getData(function(result){ console.log(result); // response above is sent to this &#39;result&#39; }) // after Promise applied function getData(callbackFunc) { return new Promise(function(resolve, reject){ // new Promise() is added $.get(&#39;http://localhost:8081/test&#39;, function(response) { resolve(response); // once data is received, call resolve() method. }); }); } getData().then (function(result){ //&#39;then&#39; is added. once getData() above is completed, then- is executed. console.log(result); // response above is sent to this &#39;result&#39; }) .",
     "url": "http://localhost:4000/docs/14_Javascript/05_js_es6/",
     "relUrl": "/docs/14_Javascript/05_js_es6/"
   }
-  ,"15": {
+  ,"17": {
+    "title": "Lambda",
+    "content": "Java - Lambda . . Lambda | . Lambda . what is Lambda? - an anonymous function with no name. . in this example, Lambda’s target type is ‘Adder’. all anonymouse function with no name have interace type. . //Lambda&#39;s target interface should have only one method. //@FunctionalInterface enforces it. @FuntionalInterface interface Adder { int add(int n); } . class Calculator { public static void main(String[] args) { int n = 2; //before Lambda expression Adder ad = new Adder(){ @Override // initiating with overriding at the same time int add(int n){ return n+ 1;} // Lambda&#39;s param (&#39;n&#39; in this case) is considered as &#39;final&#39;, can&#39;t change it. } //Lambda 1 Adder ad = (int n) -&gt; {return n + 1;}; //Lambda 2 Adder ad = (n) -&gt; {return n + 1;}; //it knows param type so we can skip it //Lambda 3 Adder ad = n -&gt; n + 1; // if logic is one line, can skip bracket. System.out.println(ad.add(n)); // 3 } . There are many registered Lambda interfaces (provided name/param/return types) so we can resue them. . // example - IntBinaryOperator (get two int, return bigger value) // before Lambda expression IntBinaryOperator op = (int x, int y) -&gt; { if(x &gt; y) return x; return y; }; // Lambda 1 IntBinaryOperator op1 = (int x, int y) -&gt; {return Math.max(x, y);}; // Lambda 2 IntBinaryOperator op2 = (x, y) -&gt; Math.max(x, y); // Lambda 3 IntBinaryOperator op = Math::max; // this Lambda refers existing interface (with Math.max) so can skip those params (x,y) System.out.println(op.applyAsInt(3, 7)); // 7 .",
+    "url": "http://localhost:4000/docs/10_Java/08_lambda/",
+    "relUrl": "/docs/10_Java/08_lambda/"
+  }
+  ,"18": {
     "title": "Security",
     "content": "Java - Security . . XXS (Sross Site Scripting) Attach | XXS (Sross Site Scripting) Attach . Users enter the input value with HTML tag (with ‘&lt; script //&gt;’) that can be executed to attack. To dissable, it either needs to ‘escape’ the HTML tag or assigns the whitelist of allowed inputs and prohibits rest of inputs. . these methods can be implemented either on the client-side(front end) or the server-side (back end). . Java (server-side) implementation example . add apache-commons-text dependency | . &lt;dependency&gt; &lt;groupId&gt;org.apache.commons&lt;/groupId&gt; &lt;artifactId&gt;commons-text&lt;/artifactId&gt; &lt;version&gt;1.8&lt;/version&gt; &lt;/dependency&gt; . result | . String escaped = StringEscapeUtils.escapeHtml4(param); // when param is &#39;&lt;script&gt;&#39;, it is transformed to *&amp;lt;script&amp;gt;* .",
     "url": "http://localhost:4000/docs/10_Java/10_java_security/",
     "relUrl": "/docs/10_Java/10_java_security/"
   }
-  ,"16": {
+  ,"19": {
     "title": "JSON",
     "content": "Javascript - JSON . . JSON(JavaScript Object Notation) Methods | | JSON(JavaScript Object Notation) . Methods . JSON.stringify(value) . it turns a JavaScript object into JSON text in a String format. . JSON.parse(value) . it turns JSON text into _Javascript object .",
     "url": "http://localhost:4000/docs/14_Javascript/10_js_json/",
     "relUrl": "/docs/14_Javascript/10_js_json/"
   }
-  ,"18": {
+  ,"21": {
     "title": "Git and CL",
     "content": "Git and Command Line . All about Git and Command Line. .",
     "url": "http://localhost:4000/docs/20_GitCL",
     "relUrl": "/docs/20_GitCL"
   }
-  ,"19": {
+  ,"22": {
     "title": "Home",
     "content": ". (2017 Dec - in Dallax, TX) . GIN YOUNG ANDREW . . [Download Resume] . Technical Skills . Java . Javascript . , JSP . JSF . JSTL . JDBC . HTML5 . CSS3 . Bootstrap . Vue.js . jQuery . XML . JSON . Spring MVC/Boot . JPA . JUnit . Mockito . H2 . MySQL . Oracle SQL . Git . CVS . Ant . Maven . SOAP . Microservices . . Work Experience . Software Analyst at GE Aviation (in contract) – Cincinnati, OH (06/2018 to Present) Debug, fix, and upgrade the intranet applications written in JSF and jBoss and keep production environment operational | Analyze codes of Spring projects including PL/SQL, XML scripts to find the programming defect and data mis-integrity and ensure continuous stable operation of the applications | . | Web Developer at Revature – Reston, VA (01/2018 to 05/2018) Develop web applications including test codes by using Java, Angular 4, Oracle SQL, and Microservice | Contribute as a full stack developer for an optimal REST configurations by practicing SOAP, REST API, WSDL, Service Oriented Architecture (SOA) | Construct a testing framework using JUnit to ensure the continous flawless code | . | Full Stack Developer at Digital One - Seoul, South Korea (03/2016 to 12/2016) Build the internal scheduler application by using Apache Velocity for Osstem Implant company | Build the point management application Clip by using Kakao Geography API , MySQL, and Spring MVC framework | . | Site manager at Bomnib - WFH (2005 to present) Maintain Bomnib, a family-owned business owned by my parents. it’s built on the e-commerce platform Cafe24 since 2005. Update the front-end code to make it fit into the mobile devices and implement the user convenient functionalities | . | . .",
     "url": "http://localhost:4000/",
     "relUrl": "/"
   }
-  ,"20": {
+  ,"23": {
     "title": "Java",
     "content": "Java . All about Java .",
     "url": "http://localhost:4000/docs/10_Java",
     "relUrl": "/docs/10_Java"
   }
-  ,"21": {
+  ,"24": {
     "title": "Javascript",
     "content": "Javascript . All about Javascript and ES6 .",
     "url": "http://localhost:4000/docs/14_Javascript",
     "relUrl": "/docs/14_Javascript"
   }
-  ,"22": {
+  ,"25": {
     "title": "Others",
     "content": "Others . Anything I learn .",
     "url": "http://localhost:4000/docs/30_Others",
     "relUrl": "/docs/30_Others"
   }
-  ,"23": {
+  ,"26": {
     "title": "Spring",
     "content": "Spring . All about Spring framework .",
     "url": "http://localhost:4000/docs/18_Spring",
     "relUrl": "/docs/18_Spring"
   }
-  ,"24": {
+  ,"27": {
     "title": "Vue JS",
     "content": "Vue . All about Vue.js .",
     "url": "http://localhost:4000/docs/15_Vue",
